@@ -1,0 +1,14 @@
+syntax = "proto3";
+package kkl.example.user;
+option java_outer_classname = "Phone";
+option java_multiple_files = true;
+
+message PhoneNumberResponse {
+  string number = 1;
+  PhoneTypeResponse type = 2;
+}
+enum PhoneTypeResponse {
+  UNKNOWN = 0;
+  MOBILE = 1;
+  LANDLINE = 2;
+}

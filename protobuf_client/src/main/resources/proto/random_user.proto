@@ -1,0 +1,29 @@
+syntax = "proto3";
+import "phone.proto";
+
+package kkl.example.user;
+option java_outer_classname = "RandomUsersProto";
+option java_multiple_files = true;
+
+service RandomUserService {
+  rpc getRandomUsers(RandomUsersRequest) returns (RandomUsersResponse);
+}
+
+message RandomUsersRequest{
+  int32 amount=1;
+}
+
+message RandomUsersResponse {
+  repeated RandomUserResponse users = 1;
+}
+
+message RandomUserResponse {
+  int32 id = 1;
+  bool is_blocked = 2;
+  string first_name = 3;
+  string last_name = 4;
+  string email = 5;
+  repeated PhoneNumberResponse phone = 6;
+  map<string, int32> product_quantities = 7;
+}
+

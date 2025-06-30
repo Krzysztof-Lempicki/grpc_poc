@@ -1,0 +1,11 @@
+
+grpc:
+  client:
+    channels:
+      random-users:
+        address: static://localhost:9090
+        negotiation-type: plaintext
+
+spring:
+  main:
+    web-application-type: none
