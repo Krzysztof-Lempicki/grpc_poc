@@ -20,7 +20,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <protoc.version>4.30.0</protoc.version>
+        <protoc.version>4.31.0</protoc.version>
     </properties>
 
     <dependencies>
@@ -34,13 +34,13 @@
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java</artifactId>
-            <version>4.31.0</version>
+            <version>${protoc.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.google.protobuf</groupId>
             <artifactId>protobuf-java-util</artifactId>
-            <version>4.31.0</version>
+            <version>${protoc.version}</version>
         </dependency>
 
         <dependency>
